@@ -1,0 +1,5 @@
+# KKFrame_Sound
+kkframe_sound
+
+自己增加AutioToolkit插件
+修改AudioController为partial的

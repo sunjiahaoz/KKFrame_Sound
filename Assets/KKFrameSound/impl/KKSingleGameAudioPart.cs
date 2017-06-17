@@ -16,21 +16,25 @@ namespace KK.Frame.Audio
     public class KKSingleGameAudioPart : MonoBehaviour, ISingleGameAudioPart
     {
         [Header("为None表示从当前对象获取")]
-        public AudioController _subAO;
+        [SerializeField]
+        protected AudioController _subAO;
+        public AudioController subAO
+        {
+            get
+            {
+                if (_subAO == null)
+                {
+                    _subAO = GetComponent<AudioController>();
+                }
+                return _subAO;
+            }
+        }
 
         public string[] _strMusicCategories;
         public string[] _strSoundCategories;
         protected virtual void Start()
         {
-            KKAudioManagerNor.Instance.RegisterAudioPart(this);
-            if (_subAO == null)
-            {
-                _subAO = GetComponent<AudioController>();
-            }
-            if (_subAO == null)
-            {
-                Debug.LogWarning("<color=orange>[Warning]</color>---" + "找不到AudioController引用！", this);
-            }
+            KKAudioManagerNor.Instance.RegisterAudioPart(this);            
         }
         protected virtual void OnDestroy()
         {

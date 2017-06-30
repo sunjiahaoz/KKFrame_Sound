@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8E3D794-64F4-44FE-8F54-F2A62E6F4FE6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;UNITY_5</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>KKFrameSoundDLLVersion</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Unity54\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AudioToolkit\AudioToolkit\AudioController.cs" />
+    <Compile Include="AudioToolkit\AudioToolkit\AudioFader.cs" />
+    <Compile Include="AudioToolkit\AudioToolkit\AudioItem.cs" />
+    <Compile Include="AudioToolkit\AudioToolkit\AudioLog.cs" />
+    <Compile Include="AudioToolkit\AudioToolkit\AudioObject.cs" />
+    <Compile Include="AudioToolkit\Shared Auxiliary Code\ArrayHelper.cs" />
+    <Compile Include="AudioToolkit\Shared Auxiliary Code\FlashSupport.cs" />
+    <Compile Include="AudioToolkit\Shared Auxiliary Code\PoolableObject.cs" />
+    <Compile Include="AudioToolkit\Shared Auxiliary Code\RegisteredComponent.cs" />
+    <Compile Include="AudioToolkit\Shared Auxiliary Code\SystemTime.cs" />
+    <Compile Include="AudioToolkit\Shared Auxiliary Code\UnitySingleton.cs" />
+    <Compile Include="KKFrameSound\Extend\AudioControllerExtend.cs" />
+    <Compile Include="KKFrameSound\Extend\AutoPlayBgmList.cs" />
+    <Compile Include="KKFrameSound\impl\KKAudioManagerNor.cs" />
+    <Compile Include="KKFrameSound\impl\KKSingleGameAudioPart.cs" />
+    <Compile Include="KKFrameSound\interface\IAudioManager.cs" />
+    <Compile Include="KKFrameSound\interface\ISingleGameAudioPart.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AudioToolkit\AudioToolkit\AudioController.cs.meta" />
+    <None Include="AudioToolkit\AudioToolkit\AudioFader.cs.meta" />
+    <None Include="AudioToolkit\AudioToolkit\AudioItem.cs.meta" />
+    <None Include="AudioToolkit\AudioToolkit\AudioLog.cs.meta" />
+    <None Include="AudioToolkit\AudioToolkit\AudioObject.cs.meta" />
+    <None Include="AudioToolkit\AudioToolkit\Editor.meta" />
+    <None Include="KKFrameSound\Extend\AudioControllerExtend.cs.meta" />
+    <None Include="KKFrameSound\Extend\AutoPlayBgmList.cs.meta" />
+    <None Include="KKFrameSound\impl\KKAudioManagerNor.cs.meta" />
+    <None Include="KKFrameSound\impl\KKSingleGameAudioPart.cs.meta" />
+    <None Include="KKFrameSound\interface\IAudioManager.cs.meta" />
+    <None Include="KKFrameSound\interface\ISingleGameAudioPart.cs.meta" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
